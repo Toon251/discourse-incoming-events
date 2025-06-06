@@ -28,7 +28,7 @@
   align-items: start; /* Center vertically */
   padding: 3px;
   gap: 5px;
-  border-radius: 2px;
+  border-radius: 10px;
   border-color: #19245c;
 }
 
@@ -53,4 +53,6 @@
 
 .incoming-events__listitem__title{
   flex-grow: 1;
+  padding: 3px;
+  vertical-align: top;
 }
