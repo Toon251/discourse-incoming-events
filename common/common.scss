@@ -26,4 +26,19 @@
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
+  padding: 1px;
+}
+
+.incoming-events__listitem__date{
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+}
+
+.incoming-events__listitem__date1{
+  font-size: larger
+}
+
+.incoming-events__listitem__date2{
+  font-size: normal;
 }
