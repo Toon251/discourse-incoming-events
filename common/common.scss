@@ -26,14 +26,16 @@
   display: flex;
   justify-content: space-between; /* Center horizontally */
   align-items: start; /* Center vertically */
-  padding: 1px;
-  gap: 5px
+  padding: 3px;
+  gap: 5px;
+  border-radius: 2px;
+  border-color: #19245c;
 }
 
 .incoming-events__listitem__date{
   display: flex;
   flex-direction: column;
-  padding: 1px;
+  padding: 3px;
   min-width: 50px;
   justify-content:space-between;
   background-color: cornflowerblue;
