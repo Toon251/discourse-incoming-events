@@ -16,3 +16,14 @@
 .incoming-events__container {
     margin-bottom: 0.5em;
 }
+
+.incoming-events__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.incoming-events__listitem {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
