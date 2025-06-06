@@ -27,6 +27,7 @@
   justify-content: space-between; /* Center horizontally */
   align-items: start; /* Center vertically */
   padding: 1px;
+  gap: 5px
 }
 
 .incoming-events__listitem__date{
@@ -34,10 +35,13 @@
   flex-direction: column;
   padding: 1px;
   min-width: 50px;
+  justify-content:space-between;
+  background-color: cornflowerblue;
 }
 
 .incoming-events__listitem__date1{
-  font-size: larger
+  font-size: larger;
+  color: whitesmoke
 }
 
 .incoming-events__listitem__date2{
