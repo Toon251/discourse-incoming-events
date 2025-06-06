@@ -1,0 +1,20 @@
+.incoming-events__wrapper {
+    background-color: #19245c;
+    padding: 5px;
+}
+
+.incoming-events__title {  
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #19245c;
+  color: white;
+  margin-top: 0.5em;
+  border: 1px solid #ccc; /* Optional: Add a border to see the div */
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+}
+
+.incoming-events__container {
+    margin-bottom: 0.5em;
+}
