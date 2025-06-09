@@ -33,7 +33,7 @@ export default class IncomingEvent extends Component {
           );
           this.incomingEvents = await resp.json();
 
-          console.log('Third fetch result:', data3);
+          console.log('Events:', this.incomingEvents);
         } catch (error) {
           console.error('Error during fetch:', error);
         }
