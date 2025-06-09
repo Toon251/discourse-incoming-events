@@ -1,6 +1,7 @@
 import Component from "@glimmer/component";
 import { computed, action } from '@ember/object';
 import Service from '@ember/service';
+import { tracked } from "@glimmer/tracking";
 
 export default class IncomingEvent extends Component {
     @tracked incomingEvents = [];
@@ -12,7 +13,7 @@ export default class IncomingEvent extends Component {
   
     constructor() {
         super(...arguments);
-        this.loadEvents(); // โหลด badges เมื่อ component ถูกเรียก
+        this.loadEvents(); 
         
     }
 
