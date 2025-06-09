@@ -3,6 +3,4 @@ plugin_outlet:
 hide_on_mobile:
   default: false
 url: 'https://connect-app.efinancethai.com/public-api/incoming-events'
-title:
-  type: string
-  default: "กิจกรรมเร็วๆ นี้"
+title: 'กิจกรรมเร็วๆ นี้'
