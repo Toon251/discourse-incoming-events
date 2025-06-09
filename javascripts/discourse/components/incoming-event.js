@@ -31,7 +31,7 @@ export default class IncomingEvent extends Component {
                   'Accept': 'application/json'
               } }
           );
-          incomingEvents = await resp.json();
+          this.incomingEvents = await resp.json();
 
           console.log('Third fetch result:', data3);
         } catch (error) {
