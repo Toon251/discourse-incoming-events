@@ -1,3 +1,4 @@
+{{#if this.incomingEvents.length}}
 <div class='incoming-events__wrapper {{settings.plugin_outlet}}'>
     <div class='incoming-events__container'>
         <div class='incoming-events__title'>
@@ -11,31 +12,11 @@
                         <div class="incoming-events__listitem__date1">{{evt.Date}}</div>
                         <div class="incoming-events__listitem__date2">{{evt.MonthYear}}</div>
                     </div>
-                    <div>{{evt.Title}}</div>
+                    <div>{{evt.EventName}}</div>
                 </div>
             {{/each}}
-            <div class="incoming-events__listitem">
-                <div class="incoming-events__listitem__date">
-                    <div class="incoming-events__listitem__date1">12</div>
-                    <div class="incoming-events__listitem__date2">ก.ค 68</div>
-                </div>
-                <div>ติวอินเวสเตอร์ Vol.8 Money มาแน่</div>
-            </div>
-            <div class="incoming-events__listitem">
-                <div class="incoming-events__listitem__date">
-                    <div class="incoming-events__listitem__date1">28</div>
-                    <div class="incoming-events__listitem__date2">มิ.ย 68</div>
-                </div>
-                <div>Workshop 2025 @ชลบุรี</div>
-            </div>
-            <div class="incoming-events__listitem">
-                <div class="incoming-events__listitem__date">
-                    <div class="incoming-events__listitem__date1">28</div>
-                    <div class="incoming-events__listitem__date2">พ.ค 68</div>
-                </div>
-                <div>Workshop 2025 @เชียงใหม่</div>
-            </div>
         </div>
 
     </div>
 </div>
+{{/if}}
