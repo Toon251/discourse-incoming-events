@@ -5,6 +5,7 @@ import { tracked } from "@glimmer/tracking";
 
 export default class IncomingEvent extends Component {
     @tracked incomingEvents = [];
+    @tracked title = "";
 
     @computed
     get isMobile() {
@@ -20,7 +21,8 @@ export default class IncomingEvent extends Component {
 
     async loadEvents() {
         try {
-
+        
+          this.title = settings.title;
         
           // Get
           const resp = await fetch(settings.url, 
@@ -37,7 +39,7 @@ export default class IncomingEvent extends Component {
           }
           
 
-          console.log('Events:', this.incomingEvents);
+          // console.log('Events:', this.incomingEvents);
         } catch (error) {
           console.error('Error during fetch:', error);
         }
