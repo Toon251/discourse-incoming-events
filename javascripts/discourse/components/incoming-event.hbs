@@ -3,7 +3,17 @@
         <div class='incoming-events__title'>
             กิจกรรมเร็วๆ นี้
         </div>
+        
         <div class='incoming-events__list'>
+            {{#each this.incomingEvents as |evt|}}
+                <div class="incoming-events__listitem">
+                    <div class="incoming-events__listitem__date">
+                        <div class="incoming-events__listitem__date1">{{evt.Date}}</div>
+                        <div class="incoming-events__listitem__date2">{{evt.MonthYear}}</div>
+                    </div>
+                    <div>{{evt.Title}}</div>
+                </div>
+            {{/each}}
             <div class="incoming-events__listitem">
                 <div class="incoming-events__listitem__date">
                     <div class="incoming-events__listitem__date1">12</div>

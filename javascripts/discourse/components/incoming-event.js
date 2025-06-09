@@ -31,7 +31,11 @@ export default class IncomingEvent extends Component {
                   'Accept': 'application/json'
               } }
           );
-          this.incomingEvents = await resp.json();
+          const respData = await resp.json();
+          if(respData.success){
+            this.incomingEvents = respData.data;
+          }
+          
 
           console.log('Events:', this.incomingEvents);
         } catch (error) {
