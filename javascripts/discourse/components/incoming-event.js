@@ -39,7 +39,7 @@ export default class IncomingEvent extends Component {
           }
           
 
-          // console.log('Events:', this.incomingEvents);
+          console.log('Events:', this.incomingEvents);
         } catch (error) {
           console.error('Error during fetch:', error);
         }
