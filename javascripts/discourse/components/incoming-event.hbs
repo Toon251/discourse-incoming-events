@@ -13,11 +13,7 @@
                         <div class="incoming-events__listitem__date2">{{evt.MonthYear}}</div>
                     </div>
                     <div class="incoming-events__lisitem__content">
-                        {{#if evt.ImgUrl.length }}
-                            <div class="incoming-events__lisitem__content_img">
-                                <img src="{{evt.ImgUrl}}" alt="{{evt.EventName}}" width="100%"></img>
-                            </div>
-                        {{/if}}
+                        
                         <div class="incoming-events__lisitem__content_name">
                             <a id="event_link" href="{{evt.Url}}" target="_blank">
                                 <div class="incoming-events__listitem__title">{{evt.EventName}}</div>
