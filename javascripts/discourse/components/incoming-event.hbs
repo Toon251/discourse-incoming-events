@@ -13,7 +13,7 @@
                         <div class="incoming-events__listitem__date2">{{evt.MonthYear}}</div>
                     </div>
                     <div class="incoming-events__lisitem__content">
-                        {{#if evt.ImgUrl }}
+                        {{#if evt.ImgUrl.length }}
                             <div class="incoming-events__lisitem__content_img">
                                 <img src="{{evt.ImgUrl}}" alt="{{evt.EventName}}" width="100%"></img>
                             </div>
