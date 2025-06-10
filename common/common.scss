@@ -63,3 +63,9 @@
   text-align: left;
   flex-grow: 1;
 }
+
+.incoming-events__lisitem__content {
+  display: flex;
+  flex-direction: column;
+  padding: 2px;
+}
