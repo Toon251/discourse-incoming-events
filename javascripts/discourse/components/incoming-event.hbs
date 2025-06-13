@@ -1,34 +1,36 @@
-{{#if this.incomingEvents.length}}
-<div class='incoming-events__wrapper {{this.outlet }}'>
-    <div class='incoming-events__container'>
-        <div class='incoming-events__title'>
-            {{this.title}}
-        </div>
-        
-        <div class='incoming-events__list'>
-            {{#each this.incomingEvents as |evt|}}
-                <div class="incoming-events__listitem">
-                    <div class="incoming-events__listitem__date">
-                        <div class="incoming-events__listitem__date1">{{evt.Date}}</div>
-                        <div class="incoming-events__listitem__date2">{{evt.MonthYear}}</div>
-                    </div>
-                    <div class="incoming-events__lisitem__content">
-                        {{#if evt.ImgUrl.length }}
-                            <div class="incoming-events__lisitem__content_img">
-                                <img src="{{evt.ImgUrl}}" alt="{{evt.EventName}}" width="100%"/>
-                            </div>
-                        {{/if}}
-                        <div class="incoming-events__lisitem__content_name">
-                            <a id="event_link" href="{{evt.Url}}" target="_blank">
-                                <div class="incoming-events__listitem__title">{{evt.EventName}}</div>
-                            </a>
+{{#if this.shown}}
+    {{#if this.incomingEvents.length}}
+    <div class='incoming-events__wrapper {{this.outlet }}'>
+        <div class='incoming-events__container'>
+            <div class='incoming-events__title'>
+                {{this.title}}
+            </div>
+            
+            <div class='incoming-events__list'>
+                {{#each this.incomingEvents as |evt|}}
+                    <div class="incoming-events__listitem">
+                        <div class="incoming-events__listitem__date">
+                            <div class="incoming-events__listitem__date1">{{evt.Date}}</div>
+                            <div class="incoming-events__listitem__date2">{{evt.MonthYear}}</div>
                         </div>
+                        <div class="incoming-events__lisitem__content">
+                            {{#if evt.ImgUrl.length }}
+                                <div class="incoming-events__lisitem__content_img">
+                                    <img src="{{evt.ImgUrl}}" alt="{{evt.EventName}}" width="100%"/>
+                                </div>
+                            {{/if}}
+                            <div class="incoming-events__lisitem__content_name">
+                                <a id="event_link" href="{{evt.Url}}" target="_blank">
+                                    <div class="incoming-events__listitem__title">{{evt.EventName}}</div>
+                                </a>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
-                </div>
-            {{/each}}
-        </div>
+                {{/each}}
+            </div>
 
+        </div>
     </div>
-</div>
+    {{/if}}
 {{/if}}

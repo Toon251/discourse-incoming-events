@@ -7,6 +7,7 @@ export default class IncomingEvent extends Component {
     @tracked incomingEvents = [];
     @tracked title = "";
     @tracked outlet = "";
+    @tracked shown = false;
 
     @computed
     get isMobile() {
@@ -39,6 +40,8 @@ export default class IncomingEvent extends Component {
           }else {
             this.outlet =  settings.plugin_outlet;
           }
+          console.log(this.outlet)
+          this.shown = true
         
           // Get
           const resp = await fetch(settings.url, 
