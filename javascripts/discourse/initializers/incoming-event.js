@@ -12,10 +12,10 @@ export default apiInitializer('1.14.0', (api) => {
     console.log(isMobile);
 
     if(isMobile){
-        console.log("Renden in mobil ", settings.plugin_outlet_mobile.trim())
+        console.log("Render in mobil ", settings.plugin_outlet_mobile.trim())
         api.renderInOutlet(settings.plugin_outlet_mobile.trim(), IncomingEvent);
     }else{
-        console.log("Renden in desktop ", settings.plugin_outlet.trim())
+        console.log("Render in desktop ", settings.plugin_outlet.trim())
         api.renderInOutlet(settings.plugin_outlet.trim(), IncomingEvent);
     }
 
