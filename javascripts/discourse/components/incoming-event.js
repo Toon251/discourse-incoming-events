@@ -35,6 +35,7 @@ export default class IncomingEvent extends Component {
         try {
         
           this.title = settings.title;
+          console.log("mobile : ", window.matchMedia("(max-width: 767px)").matches);
           if(window.matchMedia("(max-width: 767px)").matches) {
             this.outlet = settings.plugin_outlet_mobile;
           }else {
