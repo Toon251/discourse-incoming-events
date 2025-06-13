@@ -7,6 +7,8 @@ export default apiInitializer('1.14.0', (api) => {
         return window.matchMedia("(max-width: 767px)").matches;
     }
 
+    console.log(window.matchMedia("(max-width: 767px)").matches);
+
     if(isMobile){
         api.renderInOutlet(settings.plugin_outlet_mobile.trim(), IncomingEvent);
     }else{
