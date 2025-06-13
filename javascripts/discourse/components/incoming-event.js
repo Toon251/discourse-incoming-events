@@ -42,7 +42,7 @@ export default class IncomingEvent extends Component {
             this.outlet =  settings.plugin_outlet;
           }
           console.log(this.outlet)
-          this.shown = true
+          
         
           // Get
           const resp = await fetch(settings.url, 
@@ -62,6 +62,8 @@ export default class IncomingEvent extends Component {
           //console.log('Events:', this.incomingEvents);
         } catch (error) {
           console.error('Error during fetch:', error);
+        } finally {
+          this.shown = true;
         }
       }
 }
