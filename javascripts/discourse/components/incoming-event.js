@@ -6,7 +6,7 @@ import { tracked } from "@glimmer/tracking";
 export default class IncomingEvent extends Component {
     @tracked incomingEvents = [];
     @tracked title = "";
-    @tracked outlet = "";
+    //@tracked outlet = "";
     @tracked shown = false;
 
     @computed
@@ -35,13 +35,13 @@ export default class IncomingEvent extends Component {
         try {
         
           this.title = settings.title;
-          console.log("mobile : ", window.matchMedia("(max-width: 767px)").matches);
+          /*console.log("mobile : ", window.matchMedia("(max-width: 767px)").matches);
           if(window.matchMedia("(max-width: 767px)").matches) {
             this.outlet = settings.plugin_outlet_mobile;
           }else {
             this.outlet =  settings.plugin_outlet;
           }
-          console.log(this.outlet)
+          console.log(this.outlet)*/
           
         
           // Get
