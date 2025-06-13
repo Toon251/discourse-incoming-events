@@ -14,6 +14,7 @@ export default class IncomingEvent extends Component {
 
     @computed
     get getOutlet() {
+      console.log("Mobile " , /Mobi|Android/i.test(navigator.userAgent))
       return /Mobi|Android/i.test(navigator.userAgent) ? settings.plugin_outlet_mobile : settings.plugin_outlet;
     }
   
