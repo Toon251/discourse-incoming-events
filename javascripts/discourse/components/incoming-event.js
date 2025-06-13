@@ -9,13 +9,16 @@ export default class IncomingEvent extends Component {
 
     @computed
     get isMobile() {
-      return /Mobi|Android/i.test(navigator.userAgent);
+      //return /Mobi|Android/i.test(navigator.userAgent);
+      return window.matchMedia("(max-width: 767px)").matches;
     }
+
+    
 
     @computed
     get getOutlet() {
-      console.log("Mobile " , /Mobi|Android/i.test(navigator.userAgent))
-      return /Mobi|Android/i.test(navigator.userAgent) ? settings.plugin_outlet_mobile : settings.plugin_outlet;
+      console.log("Mobile " , window.matchMedia("(max-width: 767px)").matches)
+      return window.matchMedia("(max-width: 767px)").matches ? settings.plugin_outlet_mobile : settings.plugin_outlet;
     }
   
     constructor() {
