@@ -1,5 +1,7 @@
 plugin_outlet:
   default: "above-right-sidebar-blocks"
+plugin_outlet_mobile:
+  default: "above-right-sidebar-blocks"
 hide_on_mobile:
   default: false
 url: 'https://connect-app.efinancethai.com/public-api/incoming-events'
