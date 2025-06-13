@@ -6,6 +6,7 @@ import { tracked } from "@glimmer/tracking";
 export default class IncomingEvent extends Component {
     @tracked incomingEvents = [];
     @tracked title = "";
+    @tracked outlet = "";
 
     @computed
     get isMobile() {
@@ -33,6 +34,11 @@ export default class IncomingEvent extends Component {
         try {
         
           this.title = settings.title;
+          if(window.matchMedia("(max-width: 767px)").matches) {
+            this.outlet = settings.plugin_outlet_mobile;
+          }else {
+            this.outlet =  settings.plugin_outlet;
+          }
         
           // Get
           const resp = await fetch(settings.url, 
