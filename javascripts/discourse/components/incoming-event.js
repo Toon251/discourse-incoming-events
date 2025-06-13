@@ -18,6 +18,7 @@ export default class IncomingEvent extends Component {
     @computed
     get getOutlet() {
       console.log("Mobile " , window.matchMedia("(max-width: 767px)").matches)
+      console.log(window.matchMedia("(max-width: 767px)").matches ? settings.plugin_outlet_mobile : settings.plugin_outlet)
       return window.matchMedia("(max-width: 767px)").matches ? settings.plugin_outlet_mobile : settings.plugin_outlet;
     }
   
