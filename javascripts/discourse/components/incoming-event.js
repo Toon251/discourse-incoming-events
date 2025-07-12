@@ -56,6 +56,7 @@ export default class IncomingEvent extends Component {
             //console.log('Session data:', data);
             
             if (data.current_user) {
+                this.login = true;
                 return true;
             } else {
                 return false;
