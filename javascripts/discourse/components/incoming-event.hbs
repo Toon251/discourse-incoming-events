@@ -14,6 +14,14 @@
                             <div class="incoming-events__listitem__date2">{{evt.MonthYear}}</div>
                         </div>
                         <div class="incoming-events__lisitem__content">
+                            {{#if this.login}}
+                                {{#if evt.DocUrl}}
+                                    <a id="event_link" href="{{evt.DocUrl}}" target="_blank">
+                                        <div class="incoming-events__listitem__doc">ดาวโหลดเอกสาร</div>
+                                    </a>
+                                {{/if}}
+                                
+                            {{/if}}
                             {{#if evt.ImgUrl.length }}
                                 <a id="event_link" href="{{evt.Url}}" target="_blank">
                                     <div class="incoming-events__lisitem__content_img">
@@ -26,16 +34,7 @@
                                     <div class="incoming-events__listitem__title">{{evt.EventName}}</div>
                                 </a>
                             </div>
-                            {{#if this.login}}
-                                <div>Login</div>
-                                {{#if evt.DocUrl}}
-                                    <a id="event_link" href="{{evt.DocUrl}}" target="_blank">
-                                        <div class="incoming-events__listitem__doc">ดาวโหลดเอกสาร</div>
-                                    </a>
-                                {{/if}}
-                                
-                            {{/if}}
-                            <div>เอกสาร</div>
+                            
                         </div>
                         
                     </div>
