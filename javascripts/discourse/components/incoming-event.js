@@ -45,7 +45,7 @@ export default class IncomingEvent extends Component {
             }
             
             const data = await response.json();
-            //console.log('Session data:', data);
+            console.log('Session data:', data);
             
             if (data.current_user) {
                 return true;
