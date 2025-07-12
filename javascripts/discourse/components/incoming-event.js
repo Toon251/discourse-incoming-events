@@ -8,6 +8,8 @@ export default class IncomingEvent extends Component {
     @tracked title = "";
     //@tracked outlet = "";
     @tracked shown = false;
+    @tracked login = false;
+    @tracked docUrl = "";
 
     @computed
     get isMobile() {
@@ -22,6 +24,40 @@ export default class IncomingEvent extends Component {
       console.log("Mobile " , window.matchMedia("(max-width: 767px)").matches)
       console.log(window.matchMedia("(max-width: 767px)").matches ? settings.plugin_outlet_mobile : settings.plugin_outlet)
       return window.matchMedia("(max-width: 767px)").matches ? settings.plugin_outlet_mobile : settings.plugin_outlet;
+    }
+
+    async checkLogin() {
+        try {
+            const response = await fetch(`/session/current.json`);
+            
+            // Check specifically for 404 error
+            if (response.status === 404) {
+                //console.error('Endpoint not found (404)');
+                this.login = false;
+                return false;
+            }
+            
+            // Check for other HTTP errors
+            if (!response.ok) {
+                //console.error(`HTTP error! status: ${response.status}`);
+                this.login = false;
+                return false;
+            }
+            
+            const data = await response.json();
+            //console.log('Session data:', data);
+            
+            if (data.current_user) {
+                return true;
+            } else {
+                return false;
+            }
+            
+        } catch (error) {
+            console.error('Login check error:', error);
+            return false;
+        }
+    
     }
   
     constructor() {
@@ -57,6 +93,8 @@ export default class IncomingEvent extends Component {
           if(respData.success){
             this.incomingEvents = respData.data;
           }
+
+          this.checkLogin();
           
 
           //console.log('Events:', this.incomingEvents);

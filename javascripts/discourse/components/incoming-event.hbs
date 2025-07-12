@@ -15,15 +15,24 @@
                         </div>
                         <div class="incoming-events__lisitem__content">
                             {{#if evt.ImgUrl.length }}
-                                <div class="incoming-events__lisitem__content_img">
-                                    <img src="{{evt.ImgUrl}}" alt="{{evt.EventName}}" width="100%"/>
-                                </div>
+                                <a id="event_link" href="{{evt.Url}}" target="_blank"></a>
+                                    <div class="incoming-events__lisitem__content_img">
+                                        <img src="{{evt.ImgUrl}}" alt="{{evt.EventName}}" width="100%"/>
+                                    </div>
+                                </a>
                             {{/if}}
                             <div class="incoming-events__lisitem__content_name">
                                 <a id="event_link" href="{{evt.Url}}" target="_blank">
                                     <div class="incoming-events__listitem__title">{{evt.EventName}}</div>
                                 </a>
                             </div>
+                            {{#if this.login}}
+                                {{#if this.docUrl}}
+                                <a id="event_link" href="{{this.docUrl}}" target="_blank">
+                                    <div class="incoming-events__listitem__doc">ดาวโหลดเอกสาร</div>
+                                </a>
+                                {{/if}}
+                            {{/if}}
                         </div>
                         
                     </div>
