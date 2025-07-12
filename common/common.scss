@@ -61,8 +61,11 @@
 }
 
 .incoming-events__listitem__doc{
+  border: #ffffff;
+  padding: 3px;
   font-size: normal;
   text-align: center;
+  background-color: chartreuse;
 }
 
 .incoming-events__listitem__title {
