@@ -30,7 +30,7 @@ export default class IncomingEvent extends Component {
   
     constructor() {
         super(...arguments);
-        this.loadEvents(); 
+        //this.loadEvents(); 
         
     }
 
