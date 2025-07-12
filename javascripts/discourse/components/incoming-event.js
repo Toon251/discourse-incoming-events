@@ -95,7 +95,7 @@ export default class IncomingEvent extends Component {
           }
           console.log(respData.data);
 
-          this.checkLogin();
+          //this.checkLogin();
           
 
           //console.log('Events:', this.incomingEvents);
