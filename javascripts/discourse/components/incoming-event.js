@@ -9,7 +9,7 @@ export default class IncomingEvent extends Component {
     //@tracked outlet = "";
     @tracked shown = false;
     @tracked login = false;
-    @tracked docUrl = "";
+
 
     @computed
     get isMobile() {
@@ -58,11 +58,12 @@ export default class IncomingEvent extends Component {
               } }
           );
           const respData = await resp.json();
+          console.log(respData);
+
           if(respData.success){
             this.incomingEvents = respData.data;
           }
-          console.log(respData.data);
-
+          
           //this.checkLogin();
           
 
