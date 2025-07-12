@@ -29,9 +29,12 @@
                             </div>
                             {{#if this.login}}
                                 {{#if evt.DocUrl}}
-                                    <a id="event_link" href="{{evt.DocUrl}}" target="_blank">
-                                        <div class="incoming-events__listitem__doc">ดาวโหลดเอกสาร</div>
-                                    </a>
+                                    <div class="incoming-events__listitem__doc_container">
+                                        <a id="event_link" href="{{evt.DocUrl}}" target="_blank">
+                                            <div class="incoming-events__listitem__doc">ดาวโหลดเอกสาร</div>
+                                        </a>
+                                    </div>
+                                    
                                 {{/if}}
                                 
                             {{/if}}

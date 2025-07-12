@@ -60,11 +60,16 @@
   vertical-align: top;
 }
 
+.incoming-events__listitem__doc_container{
+  margin-top: 10px;
+}
+
 .incoming-events__listitem__doc{
   border: #ffffff;
-  padding: 3px;
+  padding: 5px;
   font-size: normal;
-  text-align: center;
+  text-align: left;
+  color:aquamarine;
   background-color: chartreuse;
 }
 
