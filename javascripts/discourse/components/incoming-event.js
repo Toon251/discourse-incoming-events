@@ -30,8 +30,42 @@ export default class IncomingEvent extends Component {
   
     constructor() {
         super(...arguments);
-        //this.loadEvents(); 
+        this.loadEvents(); 
         
+    }
+
+    async checkLogin() {
+        try {
+            const response = await fetch(`/session/current.json`);
+            
+            // Check specifically for 404 error
+            if (response.status === 404) {
+                //console.error('Endpoint not found (404)');
+                this.login = false;
+                return false;
+            }
+            
+            // Check for other HTTP errors
+            if (!response.ok) {
+                //console.error(`HTTP error! status: ${response.status}`);
+                this.login = false;
+                return false;
+            }
+            
+            const data = await response.json();
+            //console.log('Session data:', data);
+            
+            if (data.current_user) {
+                return true;
+            } else {
+                return false;
+            }
+            
+        } catch (error) {
+            console.error('Login check error:', error);
+            return false;
+        }
+    
     }
 
 
@@ -64,7 +98,7 @@ export default class IncomingEvent extends Component {
             this.incomingEvents = respData.data;
           }
           
-          //this.checkLogin();
+          this.checkLogin();
           
 
           //console.log('Events:', this.incomingEvents);
