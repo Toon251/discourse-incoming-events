@@ -93,6 +93,7 @@ export default class IncomingEvent extends Component {
           if(respData.success){
             this.incomingEvents = respData.data;
           }
+          console.log(respData.data);
 
           this.checkLogin();
           
